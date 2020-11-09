@@ -1,0 +1,225 @@
+@font-face {
+  font-family: "Chromate";
+  src: url('/fonts/Chromate-Regular.ttf'); 
+ }
+
+ @font-face {
+  font-family: "Cremona";
+
+  src: url('./fonts/Cremona.ttf'); 
+   src: url('/fonts/Cocogoose-Classic-ExtraBold-trial.ttf'); 
+   /* src: url('../public/fonts/Cocogoose-Classic-Medium-trial.ttf'); */
+ }
+
+ @font-face {
+  font-family: 'Coco';
+src: url('/fonts/Cocogoose-Classic-ExtraBold-trial.ttf'); 
+ }
+
+ @font-face {
+  font-family: 'Cocom';
+src: url('/fonts/Cocogoose-Classic-Medium-trial.ttf'); 
+ }
+
+ @font-face {
+  font-family: 'Kiyana';
+
+ 
+src: url('/fonts/KiyanaDisplay-UltraLight.otf'); 
+
+ }
+ @font-face {
+  font-family: 'Mosk';
+  
+src: url('/fonts/Mosk\ Light\ 300.ttf'); 
+
+
+ }
+
+ @font-face {
+    font-family: 'Mosk400';
+    
+ src: url('/fonts/Mosk\ Normal\ 400.ttf'); 
+
+ }
+
+ @font-face {
+    font-family: 'Mosk500';
+    
+ src: url('/fonts/Mosk\ Medium\ 500.ttf'); 
+
+ }
+   
+
+
+
+
+
+
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+body {
+  background: url('/images/hero.jpg');
+  background-size: cover;
+  z-index: 0;
+  overflow-x: hidden;
+  background-color: black;
+}
+
+body:after {
+  animation: grain 0.80s steps(10) infinite;
+  background-image: url('/images/grains2.png');
+  content: "";
+  height: 300%;
+  left: -50%;
+  opacity: 0.6;
+  position: fixed;
+  top: -110%;
+  width: 300%;
+  z-index: 10;
+}
+
+@keyframes grain {
+  0%, 100% { transform: translate(0, 0); }
+  10% { transform: translate(-5%, -10%); }
+  20% { transform: translate(-15%, 5%); }
+  30% { transform: translate(7%, -25%); }
+  40% { transform: translate(-5%, 25%); }
+  50% { transform: translate(-15%, 10%); }
+  60% { transform: translate(15%, 0); }
+  70% { transform: translate(0, 15%); }
+  80% { transform: translate(3%, 35%); }
+  90% { transform: translate(-10%, 10%); }
+}
+
+
+.header {
+    
+    background-color: black;
+    justify-content: center;
+    
+  }
+
+  .name{
+    
+    color: rgb(255, 255, 255);
+  }
+
+  // .stroke-name:hover{
+  //   color: rgb(0, 0, 0);
+  // }
+
+  .line {
+    width: 100%;
+    height: 2px;
+    background-color: rgba(0, 0, 0);
+    position: absolute;
+    top:50%;
+    position: absolute;
+    
+  }
+
+  .circle {
+    width: 100px;
+    height: 100px;;
+    border: 3px solid white;
+    border-radius: 10em;
+  }
+
+  canvas{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    
+  }
+
+
+  .follow {
+    border-left:1px solid rgba(255, 255, 255, 0.308);
+    border-top:0px solid white;
+    width: 55px;
+    height: 101vh;
+    position: fixed;
+    z-index: 1;
+    left: 97.1%;
+  }
+
+  
+.circular-text {
+  position: absolute;
+  top: 65%;
+  left: 77%;
+  transform: translate(-50%, -50%);
+  color: rgba(255, 255, 255, 0);
+  font-size: 24px;
+  font-weight: bolder;
+  font-family: "Monument Extended";
+  transition: 0.5s ease-out;
+  color: rgba(255, 255, 255, 0.6);
+  z-index: 2;
+  animation:rotating 20s linear infinite; 
+}
+@keyframes rotating{
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.circular-text:hover{
+  transform: rotate(360deg);
+}
+
+.arrow {
+  position: absolute;
+  top: 81%;
+  left: 77%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  color: #fff;
+  font-size: 100px;
+}
+
+.card {
+  border: 1px solid white; 
+}
+
+
+
+
+.box {
+  z-index: 2;
+  border-right:0px solid rgba(255, 255, 255, 0.308);;
+  border-left:0px solid white;
+  border-top:0px solid white;
+  border-bottom:0px solid white;
+  background-color: rgba(255, 0, 0, 0.753);
+}
+
+@media only screen and  (max-width: 1280px) {
+  .box{
+    position: inherit;
+  }
+  }
+.marque {
+  
+  height: 150px;
+}
+
+.stroker {
+  -webkit-text-stroke: 2px rgb(255, 255, 255);
+  color:transparent;
+}
+
+.stroker:hover {
+  -webkit-text-stroke: 2px rgb(0, 0, 0);
+  color:#fff;
+}

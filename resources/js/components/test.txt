@@ -1,0 +1,56 @@
+
+ <div class="header flex  items-center bg-red-700 min-h-screen">
+      
+          <div  className="flex-1 text-8xl font-bigtitle text-white mt-64">Lotfi Bouraine</div> 
+      
+      <img  className="image-pres w-8/12 sm:w-4/12 md:w-4/12 lg:w-3/12 xl:w-4/12 md:h-70 lg:h-70 xl:h-70 h-70 absolute"  src={Photo}/>
+         <div className="number font-mosk4">01</div>
+          </div>
+  
+
+
+  import React,{useEffect,useRef} from 'react'
+import ArcText from 'arc-text';
+import ReactDOM from "react-dom";
+import * as THREE from "three";
+import Photo from '../../images/bannerport.jpg'
+import Flag from './Flag'
+
+import { FaBeer } from 'react-icons/fa';
+const Home = () => {
+
+
+
+
+    return (
+      <main class="header">
+     
+     <div className="flex flex-col  sm:flex-col w-full lg:flex-col xl:flex-row min-h-screen">
+     <div className="flex flex-col w-full justify-center items-center  sm:w-full md:w-full lg:w-full xl:w-full">
+    <div className=" mx-10 text-5xl text-center sm:text-4xl xl:text-8xl md:text-8xl lg:text-center font-bigtitle text-white z-10"> 
+      Bouraine Lotfi
+</div> 
+<div className="mx-10 text-2xl text-center  xl:text-2xl xl:text-justify sm:text-2xl md:text-2xl  lg:text-center lg:text-2xl font-mosk text-white z-10"> 
+<p>Bonjour, je m'appelle Lotfi Bouraine, je suis un jeune développeur qui vie prés du luxembourg  et qui aime combiner différentes technologies pour édifier des applications modernes. J'aime égalemnt le design qu'il soit web ou graphique et je m'inspire et crée des designs qui facilite l'expérience utilisateur </p> 
+</div> 
+     </div>
+     
+     <Flag/>
+    
+     <div className="flex justify-center items-center bg-black w-full sm:w-full md:w-full lg:w-full xl:w-full w-4/12">
+     
+    <div className="circular-text text-4xl text-white">
+    <div id="rotated">Voir mes projets</div>
+    <FaBeer />
+    </div>
+
+
+    
+   </div>
+   </div>
+   
+    </main>
+    )
+}
+
+export default Home
